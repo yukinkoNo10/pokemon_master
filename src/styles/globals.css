@@ -1,0 +1,85 @@
+#__next {
+    width: 800px;
+    height: 100%;
+    /* margin: 0 auto; */
+}
+
+.base {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: -20px -10px 40px rgba(0, 0, 0, .5) inset;
+    background:linear-gradient(red 46%,black 46%,black 54%,  white 54%);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .shadow {
+    margin: auto;
+    width: 100px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.8);
+    filter: blur(6px);
+    margin-top: 10px;
+  }
+  
+  .center {
+    border-radius: 50%;
+    border: 7px solid black;
+    height: 25%;
+    width: 25%;
+    background-color: #f5f5f5;
+    display: grid;
+    place-items: center;
+    animation: rotate-anim 6s linear infinite;
+  }
+  
+  @keyframes rotate-anim {
+    0% {
+      translate: -100px;
+      scale: 70% 100%;
+    }
+    25% {
+      scale: 100% 100%;
+    }
+    50% {
+      translate: 100px;
+      scale: 70% 100%;
+    }
+    100% {
+      translate: 100px;
+      scale: 70% 100%;
+    }
+  }
+  
+  .center-button {
+    border-radius: 50%;
+    border: none;
+    display: block;
+    height: 20px;
+    width: 20px;
+    box-shadow:
+      2px 2px 4px rgba(0,0,0,0.2),
+      -3px -3px 4px rgba(255,255,255,0.2);
+    background-color: #ffffff;
+  }
+  
+  .center-button:active {
+    box-shadow:
+      inset 2px 2px 3px rgba(0,0,0,0.2),
+      inset -3px -3px 3px rgba(255,255,255,0.2);
+  }
+  
+  /* ボールを中心に移動している */
+  body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 32px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EAF3FB;
+  }
